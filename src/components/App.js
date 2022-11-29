@@ -45,39 +45,72 @@ function App() {
       }
     ];
 
-  return (
-    <div className='card-container'>
-      {
-        data.map((d) => {
-          console.log(d);
-          return (
-            <div className='card'>
-              <h5>
-                Name : {d.name}
-              </h5>
-              <p>
-                id : {d.id}
-              </p>
-              <p>
-                Quantity : {d.quantity}
-              </p>
-              <p>
-                Price : {d.price}
-              </p>
-              <p>
-                Expiry Year : {d.expiry}
-              </p>
-              <p>
-                Status : {d.status}
-              </p>
-            </div>
-          )
-        })
-      }
+    return (
+      
+      <table>
+        <th>
+          <td>Id</td>
+          <td>Name</td>
+          <td>Quantity</td>
+          <td>Price</td>
+          <td>Expiry</td>
+        </th>
+        <tr>
+        {
+          data.map((d) => {
+           console.log(d);
+           return (
+            <tr>
+              <td>{d.id}</td>
+              <td>{d.name}</td>
+              <td>{d.quantity}</td>
+              <td>{d.price}</td>
+              <td>{d.expiry}</td>
+            </tr>
+            
+           )
+          })
+        }
+        </tr>
+        
+      </table>
+      
+      
+    )
 
-    </div>
+  // return (
+  //   <div className='card-container'>
+  //     {
+  //       data.map((d) => {
+  //         console.log(d);
+  //         return (
+  //           <div className='card'>
+  //             <h5>
+  //               Name : {d.name}
+  //             </h5>
+  //             <p>
+  //               id : {d.id}
+  //             </p>
+  //             <p>
+  //               Quantity : {d.quantity}
+  //             </p>
+  //             <p>
+  //               Price : {d.price}
+  //             </p>
+  //             <p>
+  //               Expiry Year : {d.expiry}
+  //             </p>
+  //             <p>
+  //               Status : {d.status}
+  //             </p>
+  //           </div>
+  //         )
+  //       })
+  //     }
 
-  )
+  //   </div>
+
+  // )
 }
 
 export default App;

@@ -1,4 +1,4 @@
-h5{
+/* h5{
   font-size: 50px;
   margin: 0;
 }
@@ -18,4 +18,21 @@ h5{
 }
 .card h5{
   font-size: 15px;
+} */
+
+table{
+  width: 700px;
+  margin: 0 auto;
+  border: 1px solid black; 
+}
+table th td{
+  width: 80px;
+  padding-left: 30px;
+  padding-right: 30px;
+  text-align: left;
+}
+table tr td{
+  width: 80px;
+  padding-left: 30px;
+  padding-right: 30px;
 }
