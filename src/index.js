@@ -1,13 +1,16 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
-import App from '../src/components/App';
+// import App from '../src/components/App';
 import reportWebVitals from './reportWebVitals';
+import Gellary from './components/gellary'
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <App />
+    {/* <App /> */}
+
+    <Gellary />
   </React.StrictMode>
 );
 

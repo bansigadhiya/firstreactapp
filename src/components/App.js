@@ -54,6 +54,7 @@ function App() {
           <td>Quantity</td>
           <td>Price</td>
           <td>Expiry</td>
+          <td>status</td>
         </th>
         <tr>
         {
@@ -66,6 +67,7 @@ function App() {
               <td>{d.quantity}</td>
               <td>{d.price}</td>
               <td>{d.expiry}</td>
+              <td>{d.status.toString()}</td>
             </tr>
             
            )

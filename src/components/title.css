@@ -1,0 +1,15 @@
+.gallery{
+    display: flex;
+    flex-wrap: wrap;
+}
+.items{
+    display: block;
+    padding: 10px;
+}
+.items img{
+    display: flex;
+    flex-wrap: wrap;
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+}
