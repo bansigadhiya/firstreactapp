@@ -3,14 +3,17 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 // import App from '../src/components/App';
 import reportWebVitals from './reportWebVitals';
-import Gellary from './components/gellary'
+import Header from './components/Header'
+// import Gellary from './components/gellary'
+
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
     {/* <App /> */}
 
-    <Gellary />
+    {/* <Gellary /> */}
+    <Header logo="images/logo3.png" dropdown="Pages"/>
   </React.StrictMode>
 );
 
