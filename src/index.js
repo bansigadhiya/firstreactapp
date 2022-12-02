@@ -3,8 +3,9 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 // import App from '../src/components/App';
 import reportWebVitals from './reportWebVitals';
-import Header from './components/Header'
-// import Gellary from './components/gellary'
+// import Header from './components/Header'
+import Header2 from './components/Header-2'
+// import Gellary from './componnts/gellary'
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
@@ -13,7 +14,10 @@ root.render(
     {/* <App /> */}
 
     {/* <Gellary /> */}
-    <Header logo="images/logo3.png" dropdown="Pages"/>
+    {/* <Header logo="images/logo3.png" dropdown="Pages"/> */}
+
+    <Header2 menuitem=""/>
+
   </React.StrictMode>
 );
 
