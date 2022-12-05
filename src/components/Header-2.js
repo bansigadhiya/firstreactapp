@@ -35,7 +35,6 @@ function Header2(props) {
                                 </li>
                                 {
                                     props.list.map((l) => {
-                                        console.log("list>>>",l);
                                         return(
                                             <li>
                                                 <a href="#">{l}</a>
