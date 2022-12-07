@@ -1,0 +1,36 @@
+*{
+    margin: 0;
+    box-sizing: border-box;
+}
+.main-box{
+    width: 100%;
+    padding: 30px;
+    margin: 0 auto;
+}
+p{
+    padding: 30px;
+}
+#btn{
+    padding: 15px 45px;
+    font-weight: 500;
+    border: none;
+    display: inline-block;
+    margin: 10px 30px;
+    letter-spacing: 1px;
+}
+.defaultBtn{
+    background-color: white;
+    color: black;
+    border: 1px solid black !important;
+}
+.blackBtn{
+    background-color: black;
+    color: white;
+}
+.lightgreenBtn{
+    background-color: lightgreen;
+    color: black;
+}
+.lightblueBtn{
+    background-color: lightblue;
+}
