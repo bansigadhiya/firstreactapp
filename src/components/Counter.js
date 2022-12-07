@@ -7,7 +7,7 @@ class Counter extends React.Component{
 
         this.state = {
             count : 0,
-            countDown : 0,
+            countDown : 10,
             name : "Hello"
         }
     }
@@ -15,15 +15,16 @@ class Counter extends React.Component{
     increment = () =>{
         console.log("increment");
         this.setState({count : this.state.count + 1})
-        this.setState({name : "bansi"})
         
         console.log(this.state.count);
     }
 
     decrement = () =>{
         console.log("decrement");
-        this.setState({countDown : this.state.countDown - 1})
-        
+
+        if(this.state.countDown > 0){
+            this.setState({countDown : this.state.countDown - 1})
+        }
         
         console.log(this.state.countDown);
     }
@@ -41,9 +42,6 @@ class Counter extends React.Component{
                     {this.state.countDown}
                 </h3>
                 <button onClick={this.decrement}>click me</button>
-                <p>
-                    {this.state.name}
-                </p>
             </> 
         )
     }
