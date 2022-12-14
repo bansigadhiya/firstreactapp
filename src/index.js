@@ -7,9 +7,10 @@ import reportWebVitals from './reportWebVitals';
 // import Gellary from './componnts/gellary'
 // import Header2 from './components/Header-2'
 import Counter from './components/Counter';
+import HoverCounter from './components/HoverCounter';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
-const menuList = ["Blog","About","Contact",<i class="fa-solid fa-magnifying-glass"></i>]
+// const menuList = ["Blog","About","Contact",<i class="fa-solid fa-magnifying-glass"></i>]
 root.render(
   <React.StrictMode>
     {/* <App /> */}
@@ -19,6 +20,7 @@ root.render(
 
     {/* <Header2 list={menuList}/> */}
     <Counter/>
+    <HoverCounter />
 
   </React.StrictMode>
 );
