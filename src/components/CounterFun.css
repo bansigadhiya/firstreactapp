@@ -1,0 +1,11 @@
+table{
+    border: 1px solid black;
+    height: 100px;
+    
+}
+table tr td{
+    border: 1px solid black;
+}
+.product img{
+    max-width: 100px;
+}
