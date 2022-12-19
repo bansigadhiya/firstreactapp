@@ -10,6 +10,9 @@ import Counter from './components/Counter';
 import HoverCounter from './components/HoverCounter';
 import CounterFun from './components/CounterFun';
 import WindowSize from './components/WindowSize';
+import Tab from './components/Tab';
+import ListKey from './components/ListKey';
+import ManageForm from './components/ManageForm';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 // const menuList = ["Blog","About","Contact",<i class="fa-solid fa-magnifying-glass"></i>]
@@ -23,8 +26,11 @@ root.render(
     {/* <Header2 list={menuList}/> */}
     {/* <Counter/> */}
     {/* <HoverCounter /> */}
-    <CounterFun/>
-    <WindowSize />
+    {/* <CounterFun/>
+    <WindowSize /> */}
+    {/* <Tab /> */}
+    {/* <ListKey /> */}
+    <ManageForm />
 
   </React.StrictMode>
 );
