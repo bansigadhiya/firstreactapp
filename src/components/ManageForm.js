@@ -3,35 +3,34 @@ import './Form.css'
 
 function ManageForm(){
 
-    const[name,setName] = useState("");
-    const[fullName,setFullName] = useState("");
-    const[email,setEmail] = useState("");
-    const[number,setNumber] = useState("");
-    const[password,setPassword] = useState("");
+    const[data,setData] = useState({
+        name : '',
+        email : '',
+        number : '',
+        password : ''
+    })
 
-    const changeName = (e) => {
-        setName(e.target.value);
-        setFullName(e.target.value);
-    }
+    const[storeData,setStoreData] = useState([]);
 
-    const changeEmail = (e) => {
-        setEmail(e.target.value);
-    }
-    const changeNumber = (e) => {
-        setNumber(e.target.value);
-    }
-    const changePassword = (e) => {
-        setPassword(e.target.value);
+    const handleChange = (e) => {
+        const name = e.target.name;
+        const value = e.target.value;
+        setData({
+            ...data, [name] : value
+        })
     }
 
     const submitData =  (e) => {
         e.preventDefault();
-        console.log(fullName);
-        document.getElementById("heading").innerHTML = `Your Information`
-        document.getElementById("name").innerHTML = `your name is ${name}`
-        document.getElementById("email").innerHTML = `your email is ${email}`
-        document.getElementById("number").innerHTML = `your Phone number is ${number}`
-        document.getElementById("password").innerHTML = `your Password is ${password}`
+        const newData = data;
+        setStoreData([...storeData, newData]);
+    
+        setData({
+            name : ' ',
+            email : ' ',
+            number : ' ',
+            password : ' '
+        })
     }
 
     return(
@@ -39,31 +38,44 @@ function ManageForm(){
             <h1>Form</h1>
             <form action="" onSubmit={(e) => submitData(e)}>
                 <label>Name : </label>
-                <input type="text" onChange={(e) => changeName(e)}></input>
+                <input type="text" name="name" onChange={handleChange} value={data.name}></input>
                 <br></br>
                 <label>Email : </label>
-                <input type="text" onChange={(e) => changeEmail(e)}></input>
+                <input type="text" name="email" onChange={handleChange} value={data.email}></input>
                 <br></br>
                 <label>Phone Number : </label>
-                <input type="text" onChange={(e) => changeNumber(e)}></input>
+                <input type="text" name="number" onChange={handleChange} value={data.number}></input>
                 <br></br>
                 <label>Password : </label>
-                <input type="text" onChange={(e) => changePassword(e)}></input>
+                <input type="text" name="password" onChange={handleChange} value={data.password}></input>
                 <br></br>
                 <br></br>
                 <input type="submit"></input>
             </form>
-            <br></br>
-            <br></br>
-            <br></br>
-            <br></br>
-            <div className="box">
-                <h1 id="heading"></h1>
-                <p id="name"></p>
-                <p id="email"></p>
-                <p id="number"></p>
-                <p id="password"></p>
-            </div>
+             {
+                storeData.map((d,i) => {
+                    
+                    return(
+                        <div>
+                        <span>
+                            {i+1}
+                        </span>
+                        <span>
+                            {d.name}
+                        </span>
+                        <span>
+                            {d.email}
+                        </span>
+                        <span>
+                            {d.number}
+                        </span>
+                        <span>
+                            {d.password}
+                        </span>
+                    </div>
+                    )
+                })
+             }   
         </>
     )
 }

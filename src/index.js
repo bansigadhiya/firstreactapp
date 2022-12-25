@@ -13,6 +13,8 @@ import WindowSize from './components/WindowSize';
 import Tab from './components/Tab';
 import ListKey from './components/ListKey';
 import ManageForm from './components/ManageForm';
+import Register from './Register';
+import TodoApp from './components/Todo-app';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 // const menuList = ["Blog","About","Contact",<i class="fa-solid fa-magnifying-glass"></i>]
@@ -30,7 +32,9 @@ root.render(
     <WindowSize /> */}
     {/* <Tab /> */}
     {/* <ListKey /> */}
-    <ManageForm />
+    {/* <ManageForm /> */}
+    {/* <Register/> */}
+    <TodoApp/>
 
   </React.StrictMode>
 );
