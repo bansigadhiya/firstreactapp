@@ -24,7 +24,7 @@ function ManageForm(){
         e.preventDefault();
         const newData = data;
         setStoreData([...storeData, newData]);
-    
+        
         setData({
             name : ' ',
             email : ' ',

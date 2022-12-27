@@ -1,11 +1,23 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import "./Todo-app.css";
 
+const getlist = () => {
+    let items = localStorage.getItem("todolist");
+    if(items){
+        return(items = JSON.parse(localStorage.getItem("todolist")));
+    }else{
+        return [];
+    }
+}
 
 function TodoApp(){
 
     const [newItem,setNewItem] = useState("");
-    const [items,setItems] = useState([]);
+    const [items,setItems] = useState(getlist());
+
+    useEffect(() => {
+        localStorage.setItem("todolist",JSON.stringify(items));
+    },[items]);
 
     function addItem(e){
         e.preventDefault();
@@ -29,7 +41,7 @@ function TodoApp(){
         e.preventDefault();
         setItems([]);
     }
-    
+
     return(
         <>
             <h1 className="heading">Todo list app</h1>

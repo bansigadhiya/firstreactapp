@@ -1,0 +1,21 @@
+input{
+    font-size: 12px;
+    margin-bottom: 10px;
+}
+label{
+    color: blueviolet;
+    font-size: 14px;
+    font-weight: 500;
+}
+button{
+    background-color: blueviolet;
+    padding: 5px 10px;
+    color: white;
+    border: none;
+    margin-top: 15px;
+    font-size: 14px;
+}
+.error{
+    font-size: 13px;
+    font-weight: 500;
+}

@@ -1,8 +1,8 @@
-// import React from 'react';
-// import * as Yup from 'yup';
+import React from 'react';
+import * as Yup from 'yup';
 
-// export const RegisterSchema = Yup.object().shape({
-//     name : Yup.string().required()
-// }) ;
+export let RegisterSchema = Yup.object({
+    name : Yup.string().required(),
+});
 
-// export default RegisterSchema;
+export default RegisterSchema;
