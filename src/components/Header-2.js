@@ -2,7 +2,7 @@ import React from "react";
 import "../components/Header-2.css"
 
 function Header2(props) {
-    console.log(props);
+    console.log(props.list);
     
     return(
         <header>
@@ -33,6 +33,7 @@ function Header2(props) {
                                         </ul>
                                     </div>
                                 </li>
+                                
                                 {
                                     props.list.map((l) => {
                                         return(

@@ -33,7 +33,10 @@ function TodoApp(){
     }
 
     function deleteItem(id){
-        const newArray  = items.filter(item => item.id !== id);
+        const newArray = items.filter((item) => {
+            return item.id !== id;
+        })
+
         setItems(newArray);
     }
 
@@ -49,7 +52,7 @@ function TodoApp(){
                 <input type="text" placeholder="Add item.." value={newItem} onChange={e => setNewItem(e.target.value)}></input>
                 <button className="btn" onClick={(e) => addItem(e)}>Add</button>
 
-            <ul>
+            <ul className="ps-0">
                 {
                     items.map(item => {
                         return(

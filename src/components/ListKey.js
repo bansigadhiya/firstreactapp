@@ -6,7 +6,8 @@ function ListKey(){
 
     const addItem = () => {
         console.log("add item");
-        setItem = useState[1,2,3,4,5];
+        // setItem = useState[1,2,3,4,5];
+        setItem([1,2,3,4,5]);
     }
 
     return(
