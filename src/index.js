@@ -15,7 +15,6 @@ import Tab from './components/Tab';
 import ListKey from './components/ListKey';
 import ManageForm from './components/ManageForm';
 import Register from './components/Register';
-import TodoApp from './components/Todo-app';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
@@ -29,24 +28,26 @@ import AddEmployee from './components/Redirect-Crud-Form/AddEmployee';
 import ViewEmpData from './components/Redirect-Crud-Form/ViewEmpData';
 import Product from './pages/Products/Product';
 import Product2 from './pages/Products/Product2';
+import TodoList from './components/To-do app/TodoList';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 // const menuList = ["Blog","About","Contact",<i class="fa-solid fa-magnifying-glass"></i>]
 root.render(
   <React.StrictMode>
+    <TodoList />
     {/* <Header /> */}
     {/* <Product/> */}
-    <BrowserRouter>
+    {/* <BrowserRouter>
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/features" element={<Features />} />
-        {/* <Route path="/" element={<Product/>}></Route> */}
-        {/* <Route path="/productDetail" element={<ProductDetail />}></Route> */}
+        <Route path="/" element={<Product/>}></Route>
+        <Route path="/productDetail" element={<ProductDetail />}></Route>
         <Route path="/AddEmployee" element={<AddEmployee/>}></Route>
         <Route path="/ViewEmpData" element={<ViewEmpData />}></Route>
         <Route path="/viewProduct" element={<Product />}></Route>
       </Routes>
-    </BrowserRouter>
+    </BrowserRouter> */}
 
       {/* <App /> */}
 
